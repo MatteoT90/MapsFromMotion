@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nerfies: Deformable Neural Radiance Fields</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://github.com/MatteoT90">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Related Pages
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://3dvconf.github.io/2025/">
+            3DV 2025
+          </a>
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            Flatlandia
+          </a>
+          <a class="navbar-item" href="https://dcitizens.eu/">
+            DCitizen
+          </a>  
+          <a class="navbar-item" href="https://bauhaus-seas.eu/">
+            Bauhaus of the Seas Sails
+          </a>  
+          <a class="navbar-item" href="https://fondazione-fair.it/en/">
+            FAIR
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Maps from Motion (MfM): Generating 2D Semantic Maps from Sparse
+            Multi-view Images</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.iit.it/people-details/-/people/matteo-toso">Matteo Toso</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.iit.it/people-details/-/people/stefano-fiorini">Stefano Fiorini</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://stuart-james.com/">Stuart James</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://sofienbouaziz.com">Alessio Del Bue </a><sup></sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Istituto Italiano di Tecnologia (IIT)</span>
+            <span class="author-block"><sup>2</sup>Durham University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2411.12620"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2411.12620"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!--<span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>-->
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/IIT-PAVIS/Flatlandia"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/figure_one.png" 
+      alt="Maps from Motion">
+    </img>
+      <h2 class="subtitle has-text-centered">
+        <em> The Maps from Motion (MfM) Concept.</em>  From a set of uncalibrated images (a) we extract 2D detections of static urban objects (b), and generate local top-down 2D maps representing the spatial arrangement of the objects with respect to each image (c). We then learn how to register all local maps in the same reference frame (d), to generate a common global map with all objects present in the scene (e).
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <video width="320" height="240" autoplay>
+        <source src="static/MfM_website.mp4" type="video/mp4">
+      </video> 
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            World-wide detailed 2D maps require enormous collective efforts. <em> OpenStreetMap </em> is 
+            the result of 11 million registered users manually annotating the GPS location of over 1.75 
+            billion entries, including distinctive landmarks and common urban objects. At the same time, 
+            manual annotations can include errors and are slow to update, limiting the map's accuracy. 
+            <em> Maps from Motion </em> (MfM) is a step forward to automatize such time-consuming map 
+            making procedure by computing 2D maps of semantic objects directly from a collection of 
+            uncalibrated multi-view images. 
+          </p>
+          <p>  
+            From each image, we extract a set of object detections, and estimate their spatial 
+            arrangement in a top-down local map centered in the reference frame of the camera that 
+            captured the image.
+            Aligning these local maps is not a trivial problem, since they provide incomplete, noisy 
+            fragments of the scene, and matching detections across them is unreliable because of the 
+            presence of repeated pattern and the limited appearance variability of urban objects. 
+            We address this with a novel graph-based framework, that encodes the spatial and semantic 
+            distribution of the objects detected in each image, and learns how to combine them to 
+            predict the objects' poses in a global reference system, while taking into account all 
+            possible detection matches and preserving the topology observed in each image. 
+            Despite the complexity of the problem, our best model achieves global 2D registration with 
+            an average accuracy within 4 meters (<em> i.e., </em> below GPS accuracy) even on sparse sequences with 
+            strong viewpoint change, on which COLMAP has an 80% failure rate. 
+            We provide extensive evaluation on synthetic and real-world data, showing how the method 
+            obtains a solution even in scenarios where standard optimization techniques fail.
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Acknowledgement. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                This work is supported by PNRR MUR Project Cod. PE0000013 <em> 
+                "Future Artificial Intelligence Research (FAIR)"
+                </em> - CUP J53C22003010006, and by the European Union's 
+                Horizon research and innovation programme 
+                <em>"DCitizens" </em> (grant agreement No 101079116) and 
+                <em>"Bauhaus of the Seas Sails" </em> (grant agreement No 101079995).
+              </p>
+    
+            </div>
+          </div>
+        </div>
+        <!--/ Acknowledgement. -->
+    
+
+    <!-- Paper video. 
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    / Paper video. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Matteo, Toso and Stefano, Fiorini and Stuart, James and Alessio, Del Bue},
+  title     = {Maps from Motion (MfM): Generating 2D Semantic Maps from Sparse Multi-view Images},
+  journal   = {3DV},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/MAPMAKER.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/MatteoT90" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This website is based on <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, 
+            and we thank the authors for sharing the templates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
