@@ -1,6 +1,6 @@
 # Nerfies
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository for the website for Mapmaker, based on the source code for the [Nerfies website](https://nerfies.github.io).
 
 If you find Nerfies useful for your work please cite:
 ```
@@ -9,6 +9,17 @@ If you find Nerfies useful for your work please cite:
   title     = {Nerfies: Deformable Neural Radiance Fields},
   journal   = {ICCV},
   year      = {2021},
+}
+```
+
+And if you like our MapMaker work reference
+
+```
+@article{park2021nerfies,
+  author    = {Matteo, Toso and Stefano, Fiorini and Stuart, James and Alessio, Del Bue},
+  title     = {Maps from Motion (MfM): Generating 2D Semantic Maps from Sparse Multi-view Images},
+  journal   = {3DV},
+  year      = {2025},
 }
 ```
 
