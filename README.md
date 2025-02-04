@@ -1,4 +1,4 @@
-# Nerfies
+# MfM Based on Nerfies
 
 This is the repository for the website for Mapmaker, based on the source code for the [Nerfies website](https://nerfies.github.io).
 
